@@ -59,7 +59,7 @@ function App({demo = false}: PropsType) {
                         </Typography>
                         {isLoggedIn && <Button color="inherit" onClick={logoutHandler}>Log out</Button>}
                     </Toolbar>
-                    {status === 'loading' && <LinearProgress/>}
+                        {status === 'loading' && <LinearProgress color={'secondary'} className={'linear'}/>}
                 </AppBar>
                 <Container fixed>
                     <Route exact path={'/'} render={() => <TodolistsList demo={demo}/>}/>
