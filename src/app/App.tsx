@@ -45,10 +45,10 @@ export const App: React.FC<PropsType> = ({demo = false}) => {
                     </Typography>
                     {isLoggedIn && <Button color="inherit" onClick={logoutHandler}>Log out</Button>}
                 </Toolbar>
-                <div style={{height: '5px'}}>
-                    {status === 'loading' && <LinearProgress color={'secondary'}/>}
-                </div>
             </AppBar>
+            <div style={{height: '5px'}}>
+                {status === 'loading' && <LinearProgress color={'secondary'}/>}
+            </div>
             <Container fixed>
                 <Route exact path={'/'} render={() => <TodolistsList demo={demo}/>}/>
                 <Route path={'/login'} render={() => <Login/>}/>
